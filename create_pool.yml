@@ -20,7 +20,7 @@
         provider: "{{provider}}"
         name: "{{ poolname }}"
         lb_method: "round-robin"
-        monitors: "/Common/http"
+        monitors: "{{ monitors }}"
         monitor_type: "and_list"
 
     - name: ADD POOL MEMBERS
