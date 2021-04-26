@@ -30,5 +30,5 @@
         name: "{{hostvars[item].inventory_hostname}}"
         host: "{{hostvars[item].ansible_host}}"
         port: "80"
-        pool: "http_pool"
+        pool: "{{ poolname }}"
       loop: "{{ groups['web'] }}"
