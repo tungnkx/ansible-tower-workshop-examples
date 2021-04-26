@@ -29,6 +29,6 @@
         state: "present"
         name: "{{hostvars[item].inventory_hostname}}"
         host: "{{hostvars[item].ansible_host}}"
-        port: "80"
+        port: "{{ port_backend }}"
         pool: "{{ poolname }}"
       loop: "{{ groups['web'] }}"
